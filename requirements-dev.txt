@@ -1,0 +1,26 @@
+# Development dependencies
+-r requirements.txt
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+pytest-mpl>=0.16.0
+
+# Documentation
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0
+numpydoc>=1.2.0
+
+# Code quality
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950
+isort>=5.10.0
+
+# Optional visualization libraries (for testing)
+seaborn>=0.12.0
+plotly>=5.0.0
+
+# Build and distribution
+build>=0.7.0
+twine>=4.0.0
