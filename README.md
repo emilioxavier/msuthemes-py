@@ -135,17 +135,42 @@ if is_metropolis_available():
 
 The Metropolis font includes 18 font files with 9 weights (100-900), each with normal and italic variants. See [fonts documentation](msuthemes/fonts/README.md) for more details.
 
-### Load BigTen Dataset
+### BigTen Dataset
+
+MSUthemes includes historical data (1996-2023) for all 18 Big Ten Conference institutions from the College Scorecard:
 
 ```python
-from msuthemes import load_bigten_data
+from msuthemes import load_bigten_data, get_bigten_summary
 
-# Load historical Big Ten data
+# Load all data (504 rows × 38 columns)
 df = load_bigten_data()
 
-# Filter for MSU
-msu_data = df[df['name'] == 'MSU']
+# Filter for specific institutions (supports aliases)
+msu_data = load_bigten_data(institutions=['MSU'])
+rivalries = load_bigten_data(institutions=['MSU', 'Michigan', 'Ohio State'])
+
+# Filter by years
+recent = load_bigten_data(years=[2020, 2021, 2022, 2023])
+
+# Combine filters and select columns
+msu_recent = load_bigten_data(
+    institutions=['MSU'],
+    years=[2020, 2021, 2022, 2023],
+    columns=['name', 'entry_term', 'UGDS', 'ADM_RATE', 'TUITIONFEE_IN']
+)
+
+# Get summary statistics
+summary = get_bigten_summary()
+print(summary)
 ```
+
+The dataset includes:
+- **Enrollment data**: Total, by gender, by race/ethnicity
+- **Admission rates**: Percentage of applicants admitted
+- **Completion rates**: 4-year completion percentage
+- **Tuition and fees**: In-state and out-of-state
+- **Cost of attendance**: Total estimated costs
+- **Demographics**: Student body composition
 
 ## Color Palettes
 
@@ -212,7 +237,7 @@ MSUthemes is currently in **alpha development** (v0.1.0). The API may change in 
 - [x] Phase 3: Metropolis font integration
 - [x] Phase 4: matplotlib/seaborn themes
 - [x] Phase 5: Big Ten functionality
-- [ ] Phase 6: BigTen dataset integration
+- [x] Phase 6: BigTen dataset integration
 - [ ] Phase 7: Documentation
 - [ ] Phase 8: Test suite
 - [ ] Phase 9: Examples and tutorials

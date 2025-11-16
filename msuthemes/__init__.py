@@ -10,6 +10,7 @@ Modules:
     fonts: Metropolis font utilities and management
     themes: matplotlib and seaborn theme functions
     bigten: Big Ten institutional color utilities
+    data: Dataset loading and management
     utils: Helper functions
 
 Examples:
@@ -34,6 +35,7 @@ from msuthemes import palettes
 from msuthemes import fonts
 from msuthemes import themes
 from msuthemes import bigten
+from msuthemes import data
 from msuthemes import utils
 
 # Import commonly used items for convenience
@@ -76,6 +78,13 @@ from msuthemes.bigten import (
     list_bigten_institutions,
 )
 
+from msuthemes.data import (
+    load_bigten_data,
+    get_bigten_summary,
+    get_dataset_info,
+    list_available_datasets,
+)
+
 # Package metadata and exports
 __all__ = [
     # Version info
@@ -89,6 +98,7 @@ __all__ = [
     "fonts",
     "themes",
     "bigten",
+    "data",
     "utils",
     # Common colors
     "MSU_GREEN",
@@ -119,7 +129,9 @@ __all__ = [
     "get_bigten_colors",
     "bigten_palette",
     "list_bigten_institutions",
+    # Data
+    "load_bigten_data",
+    "get_bigten_summary",
+    "get_dataset_info",
+    "list_available_datasets",
 ]
-
-# Future imports (to be added in later phases)
-# from .data import load_bigten_data
