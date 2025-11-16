@@ -32,6 +32,7 @@ __license__ = "CC-BY-SA-4.0"
 from msuthemes import colors
 from msuthemes import palettes
 from msuthemes import fonts
+from msuthemes import themes
 from msuthemes import utils
 
 # Import commonly used items for convenience
@@ -61,6 +62,13 @@ from msuthemes.fonts import (
     get_font_path,
 )
 
+from msuthemes.themes import (
+    theme_msu,
+    set_msu_style,
+    reset_theme,
+    get_current_theme,
+)
+
 # Package metadata and exports
 __all__ = [
     # Version info
@@ -72,6 +80,7 @@ __all__ = [
     "colors",
     "palettes",
     "fonts",
+    "themes",
     "utils",
     # Common colors
     "MSU_GREEN",
@@ -93,9 +102,13 @@ __all__ = [
     "register_metropolis_fonts",
     "is_metropolis_available",
     "get_font_path",
+    # Themes
+    "theme_msu",
+    "set_msu_style",
+    "reset_theme",
+    "get_current_theme",
 ]
 
 # Future imports (to be added in later phases)
-# from .themes import theme_msu, set_msu_style
 # from .bigten import get_bigten_colors, bigten_palette
 # from .data import load_bigten_data
