@@ -27,17 +27,62 @@ __author__ = "Emilio Xavier Esposito"
 __email__ = "emilio@msu.edu"
 __license__ = "CC-BY-SA-4.0"
 
-# Package metadata
+# Import submodules
+from msuthemes import colors
+from msuthemes import palettes
+from msuthemes import utils
+
+# Import commonly used items for convenience
+from msuthemes.colors import (
+    MSU_GREEN,
+    MSU_WHITE,
+    MSU_BLACK,
+    MSU_ORANGE,
+    MSU_TEAL,
+    BIGTEN_COLORS_PRIMARY,
+    BIGTEN_COLORS_SECONDARY,
+)
+
+from msuthemes.palettes import (
+    msu_seq,
+    msu_div,
+    msu_qual1,
+    msu_qual2,
+    MSU_PALETTES,
+    get_palette,
+    list_palettes,
+)
+
+# Package metadata and exports
 __all__ = [
+    # Version info
     "__version__",
     "__author__",
     "__email__",
     "__license__",
+    # Submodules
+    "colors",
+    "palettes",
+    "utils",
+    # Common colors
+    "MSU_GREEN",
+    "MSU_WHITE",
+    "MSU_BLACK",
+    "MSU_ORANGE",
+    "MSU_TEAL",
+    "BIGTEN_COLORS_PRIMARY",
+    "BIGTEN_COLORS_SECONDARY",
+    # Palettes
+    "msu_seq",
+    "msu_div",
+    "msu_qual1",
+    "msu_qual2",
+    "MSU_PALETTES",
+    "get_palette",
+    "list_palettes",
 ]
 
-# Placeholder imports - will be populated as modules are created
-# from .colors import *
-# from .palettes import *
+# Future imports (to be added in later phases)
 # from .themes import theme_msu, set_msu_style
 # from .bigten import get_bigten_colors, bigten_palette
 # from .data import load_bigten_data
