@@ -239,7 +239,7 @@ MSUthemes is currently in **alpha development** (v0.1.0). The API may change in 
 - [x] Phase 5: Big Ten functionality
 - [x] Phase 6: BigTen dataset integration
 - [x] Phase 7: Documentation
-- [ ] Phase 8: Test suite
+- [x] Phase 8: Test suite
 - [ ] Phase 9: Examples and tutorials
 - [ ] Phase 10: PyPI publication
 
