@@ -33,6 +33,7 @@ from msuthemes import colors
 from msuthemes import palettes
 from msuthemes import fonts
 from msuthemes import themes
+from msuthemes import bigten
 from msuthemes import utils
 
 # Import commonly used items for convenience
@@ -69,6 +70,12 @@ from msuthemes.themes import (
     get_current_theme,
 )
 
+from msuthemes.bigten import (
+    get_bigten_colors,
+    bigten_palette,
+    list_bigten_institutions,
+)
+
 # Package metadata and exports
 __all__ = [
     # Version info
@@ -81,6 +88,7 @@ __all__ = [
     "palettes",
     "fonts",
     "themes",
+    "bigten",
     "utils",
     # Common colors
     "MSU_GREEN",
@@ -107,8 +115,11 @@ __all__ = [
     "set_msu_style",
     "reset_theme",
     "get_current_theme",
+    # Big Ten
+    "get_bigten_colors",
+    "bigten_palette",
+    "list_bigten_institutions",
 ]
 
 # Future imports (to be added in later phases)
-# from .bigten import get_bigten_colors, bigten_palette
 # from .data import load_bigten_data

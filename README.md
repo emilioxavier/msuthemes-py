@@ -211,7 +211,7 @@ MSUthemes is currently in **alpha development** (v0.1.0). The API may change in 
 - [x] Phase 2: Color system implementation
 - [x] Phase 3: Metropolis font integration
 - [x] Phase 4: matplotlib/seaborn themes
-- [ ] Phase 5: Big Ten functionality
+- [x] Phase 5: Big Ten functionality
 - [ ] Phase 6: BigTen dataset integration
 - [ ] Phase 7: Documentation
 - [ ] Phase 8: Test suite
