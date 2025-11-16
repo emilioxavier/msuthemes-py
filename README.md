@@ -102,6 +102,39 @@ colors = get_bigten_colors(["MSU", "Michigan", "Ohio State"])
 # Returns: {'MSU': '#18453B', 'Michigan': '#00274C', 'Ohio State': '#BB0000'}
 ```
 
+### Using Metropolis Font
+
+The Metropolis font is bundled with MSUthemes and can be easily registered with matplotlib:
+
+```python
+from msuthemes import register_metropolis_fonts
+import matplotlib.pyplot as plt
+
+# Register Metropolis font with matplotlib
+register_metropolis_fonts()
+
+# Use Metropolis in your plots
+plt.rcParams['font.family'] = 'Metropolis'
+
+# Create plot with Metropolis font
+fig, ax = plt.subplots()
+ax.plot([1, 2, 3], [1, 4, 2])
+ax.set_title('Plot with Metropolis Font', fontsize=16, weight='bold')
+ax.set_xlabel('X Axis', fontsize=12)
+plt.show()
+```
+
+Check if Metropolis is available:
+
+```python
+from msuthemes import is_metropolis_available
+
+if is_metropolis_available():
+    print("Metropolis font is ready!")
+```
+
+The Metropolis font includes 18 font files with 9 weights (100-900), each with normal and italic variants. See [fonts documentation](msuthemes/fonts/README.md) for more details.
+
 ### Load BigTen Dataset
 
 ```python
@@ -175,8 +208,8 @@ MSUthemes is currently in **alpha development** (v0.1.0). The API may change in 
 ### Roadmap
 
 - [x] Phase 1: Project setup and infrastructure
-- [ ] Phase 2: Color system implementation
-- [ ] Phase 3: Metropolis font integration
+- [x] Phase 2: Color system implementation
+- [x] Phase 3: Metropolis font integration
 - [ ] Phase 4: matplotlib/seaborn themes
 - [ ] Phase 5: Big Ten functionality
 - [ ] Phase 6: BigTen dataset integration

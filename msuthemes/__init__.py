@@ -7,6 +7,7 @@ matplotlib, seaborn, and plotly.
 Modules:
     colors: Color constant definitions
     palettes: Palette generation and management
+    fonts: Metropolis font utilities and management
     themes: matplotlib and seaborn theme functions
     bigten: Big Ten institutional color utilities
     utils: Helper functions
@@ -30,6 +31,7 @@ __license__ = "CC-BY-SA-4.0"
 # Import submodules
 from msuthemes import colors
 from msuthemes import palettes
+from msuthemes import fonts
 from msuthemes import utils
 
 # Import commonly used items for convenience
@@ -53,6 +55,12 @@ from msuthemes.palettes import (
     list_palettes,
 )
 
+from msuthemes.fonts import (
+    register_metropolis_fonts,
+    is_metropolis_available,
+    get_font_path,
+)
+
 # Package metadata and exports
 __all__ = [
     # Version info
@@ -63,6 +71,7 @@ __all__ = [
     # Submodules
     "colors",
     "palettes",
+    "fonts",
     "utils",
     # Common colors
     "MSU_GREEN",
@@ -80,6 +89,10 @@ __all__ = [
     "MSU_PALETTES",
     "get_palette",
     "list_palettes",
+    # Fonts
+    "register_metropolis_fonts",
+    "is_metropolis_available",
+    "get_font_path",
 ]
 
 # Future imports (to be added in later phases)
