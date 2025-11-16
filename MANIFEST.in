@@ -1,0 +1,34 @@
+# Include documentation
+include README.md
+include LICENSE
+include MSUpythemes_roadmap.md
+include CHANGELOG.md
+
+# Include font files
+recursive-include msuthemes/fonts *.ttf
+recursive-include msuthemes/fonts *.otf
+recursive-include msuthemes/fonts LICENSE
+recursive-include msuthemes/fonts README.md
+
+# Include data files
+recursive-include msuthemes/data *.csv
+
+# Include type stubs if any
+recursive-include msuthemes *.pyi
+
+# Exclude compiled Python files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *$py.class
+global-exclude *.so
+
+# Exclude tests from distribution
+prune tests
+prune docs/_build
+prune examples/output
+prune htmlcov
+
+# Exclude development files
+global-exclude .git*
+global-exclude .coverage
+global-exclude .pytest_cache
