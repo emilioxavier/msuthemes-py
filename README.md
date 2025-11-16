@@ -241,7 +241,7 @@ MSUthemes is currently in **alpha development** (v0.1.0). The API may change in 
 - [x] Phase 7: Documentation
 - [x] Phase 8: Test suite
 - [x] Phase 9: Examples and tutorials
-- [ ] Phase 10: PyPI publication
+- [x] Phase 10: PyPI publication
 
 ## Related Projects
 
