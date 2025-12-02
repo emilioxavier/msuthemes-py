@@ -241,11 +241,11 @@ MSUthemes is currently in **alpha development** (v0.1.0). The API is stable but 
 
 ## Contributing
 
-Contributions are welcome! Please see our [Contributing Guide](development/contributing/) for details.
+Contributions are welcome! Please see our [Contributing Guide](development/contributing.md) for details.
 
 ## License
 
-MSUthemes is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](development/license/).
+MSUthemes is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](development/license.md).
 
 ## Citation
 
