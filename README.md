@@ -274,7 +274,7 @@ If you use MSUthemes in your research or publications, please cite:
 ## Contact
 
 - **Author**: Emilio Xavier Esposito
-- **Email**: emilio@msu.edu
+- **Email**: emilio.esposito@gmail.com
 - **GitHub**: [https://github.com/emilioxavier/msuthemes-py](https://github.com/emilioxavier/msuthemes-py)
 - **Issues**: [https://github.com/emilioxavier/msuthemes-py/issues](https://github.com/emilioxavier/msuthemes-py/issues)
 

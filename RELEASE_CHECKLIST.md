@@ -319,7 +319,7 @@ git push origin v0.1.0
 
 For questions about the release process:
 - **Author**: Emilio Xavier Esposito
-- **Email**: emilio@msu.edu
+- **Email**: emilio.esposito@gmail.com
 - **GitHub**: https://github.com/emilioxavier/msuthemes-py/issues
 
 ---

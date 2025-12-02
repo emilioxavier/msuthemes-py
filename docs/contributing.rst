@@ -246,7 +246,7 @@ Questions?
 If you have questions about contributing:
 
 * Open a discussion on GitHub
-* Email the maintainer: emilio@msu.edu
+* Email the maintainer: emilio.esposito@gmail.com
 * Check existing issues and pull requests
 
 Thank you for contributing to MSUthemes!

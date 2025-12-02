@@ -26,7 +26,7 @@ Examples:
 
 __version__ = "0.1.0"
 __author__ = "Emilio Xavier Esposito"
-__email__ = "emilio@msu.edu"
+__email__ = "emilio.esposito@gmail.com"
 __license__ = "CC-BY-SA-4.0"
 
 # Import submodules

@@ -165,4 +165,4 @@ MSUthemes uses the bundled Metropolis font files, which are automatically regist
 
 For issues or questions about the Metropolis font in MSUthemes:
 - GitHub Issues: https://github.com/emilioxavier/msuthemes-py/issues
-- Email: emilio@msu.edu
+- Email: emilio.esposito@gmail.com

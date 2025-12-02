@@ -117,7 +117,7 @@ Contact
 For licensing questions, contact:
 
 * **Author**: Emilio Xavier Esposito
-* **Email**: emilio@msu.edu
+* **Email**: emilio.esposito@gmail.com
 * **GitHub**: https://github.com/emilioxavier/msuthemes-py
 
 Related Licenses
