@@ -130,24 +130,38 @@
 }
 
 /* Color palette showcase */
-.color-swatch {
-  display: inline-block;
-  width: 100px;
-  height: 50px;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 50px;
-  font-weight: bold;
-  font-size: 0.8em;
-}
-
 .color-palette {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 20px 0;
+}
+
+.color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.color-label {
+  margin-top: 5px;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--msu-gray);
+  text-align: center;
 }
 
 /* Institution colors grid */
