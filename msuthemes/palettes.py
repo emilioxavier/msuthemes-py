@@ -82,25 +82,56 @@ class MSUPalette:
             >>> palette.as_hex(n_colors=5)  # 5 colors
             >>> palette.as_hex(n_colors=5, reverse=True)  # 5 colors, reversed
         """
-        colors = self.colors[::-1] if reverse else self.colors
-
         if n_colors is None:
+            colors = self.colors[::-1] if reverse else self.colors
             return colors
 
         if n_colors <= 0:
             raise ValueError("n_colors must be positive")
 
-        # If requesting exact number or fewer colors, slice the palette
-        if n_colors <= len(colors):
+        # Get the colors without reversing first
+        if n_colors <= len(self.colors):
             # For discrete selection, evenly space the colors
-            if n_colors == len(colors):
-                return colors
+            if n_colors == len(self.colors):
+                result = self.colors[:]
             else:
-                indices = np.linspace(0, len(colors) - 1, n_colors).astype(int)
-                return [colors[i] for i in indices]
+                indices = np.linspace(0, len(self.colors) - 1, n_colors).astype(int)
+                result = [self.colors[i] for i in indices]
+        else:
+            # If requesting more colors than available, interpolate
+            result = self._interpolate_colors(n_colors, reverse=False)
 
-        # If requesting more colors than available, interpolate
-        return self._interpolate_colors(n_colors, reverse)
+        # Apply reverse after selection
+        return result[::-1] if reverse else result
+
+    def as_rgb(self, n_colors: Optional[int] = None, reverse: bool = False) -> List[tuple]:
+        """Get colors as RGB tuples (0-255 range).
+
+        Args:
+            n_colors: Number of colors to return. If None, returns all colors.
+                     If greater than palette length, interpolates (continuous mode).
+            reverse: If True, reverse the color order
+
+        Returns:
+            List of RGB tuples with values in 0-255 range
+
+        Examples:
+            >>> palette = msu_seq
+            >>> palette.as_rgb()  # All colors as RGB
+            >>> palette.as_rgb(n_colors=5)  # 5 colors as RGB
+            >>> palette.as_rgb(n_colors=5, reverse=True)  # 5 colors, reversed
+        """
+        hex_colors = self.as_hex(n_colors=n_colors, reverse=reverse)
+
+        rgb_colors = []
+        for hex_color in hex_colors:
+            hex_color = hex_color.lstrip('#')
+            r = int(hex_color[0:2], 16)
+            g = int(hex_color[2:4], 16)
+            b = int(hex_color[4:6], 16)
+            rgb_colors.append((r, g, b))
+
+        return rgb_colors
 
     def _hex_to_rgb_normalized(self, hex_color: str) -> tuple:
         """Convert hex to normalized RGB (0-1)."""
@@ -283,9 +314,19 @@ msu_seq_green = MSUPalette(
 )
 """MSU Sequential Palette - Green (9 colors, bright green variant)"""
 
+msu_seq2 = MSUPalette(
+    colors=[
+        "#0F2922", "#18453B", "#3FA060",
+        "#9BB9A8", "#D0D9D7", "#E7ECEB"
+    ],
+    palette_type="seq",
+    name="msu_seq2"
+)
+"""MSU Sequential Palette 2 (6 colors, green gradient)"""
+
 
 # =============================================================================
-# MSU Diverging Palette
+# MSU Diverging Palettes
 # =============================================================================
 
 msu_div = MSUPalette(
@@ -298,6 +339,17 @@ msu_div = MSUPalette(
     name="msu_div"
 )
 """MSU Diverging Palette (9 colors, red to blue)"""
+
+msu_div2 = MSUPalette(
+    colors=[
+        "#CB5A28", "#DF9573", "#F4D9CD",
+        "#FFFFFF", "#9BB9A8", "#466A62",
+        "#18453B"
+    ],
+    palette_type="div",
+    name="msu_div2"
+)
+"""MSU Diverging Palette 2 (7 colors, orange to green through white)"""
 
 
 # =============================================================================
@@ -351,11 +403,34 @@ msu_qual2 = MSUPalette(
 
 
 # =============================================================================
+# Big Ten Palettes
+# =============================================================================
+
+# Import colors from colors module
+from .colors import BIGTEN_COLORS_PRIMARY, BIGTEN_COLORS_SECONDARY
+
+bigten_primary = MSUPalette(
+    colors=list(BIGTEN_COLORS_PRIMARY.values()),
+    palette_type="qual",
+    name="bigten_primary"
+)
+"""Big Ten Primary Colors Palette (18 colors)"""
+
+bigten_secondary = MSUPalette(
+    colors=list(BIGTEN_COLORS_SECONDARY.values()),
+    palette_type="qual",
+    name="bigten_secondary"
+)
+"""Big Ten Secondary Colors Palette (18 colors)"""
+
+
+# =============================================================================
 # Palette Dictionary (for easy access by name)
 # =============================================================================
 
 MSU_PALETTES = {
     "msu_seq": msu_seq,
+    "msu_seq2": msu_seq2,
     "msu_seq_red": msu_seq_red,
     "msu_seq_purple": msu_seq_purple,
     "msu_seq_yellow": msu_seq_yellow,
@@ -363,9 +438,12 @@ MSU_PALETTES = {
     "msu_seq_orange": msu_seq_orange,
     "msu_seq_green": msu_seq_green,
     "msu_div": msu_div,
+    "msu_div2": msu_div2,
     "msu_core": msu_core,
     "msu_qual1": msu_qual1,
     "msu_qual2": msu_qual2,
+    "bigten_primary": bigten_primary,
+    "bigten_secondary": bigten_secondary,
 }
 """Dictionary of all MSU palettes for easy access by name"""
 

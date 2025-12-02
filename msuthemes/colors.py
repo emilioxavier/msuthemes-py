@@ -41,17 +41,20 @@ MSU_BLACK: str = "#000000"
 # MSU Secondary/Accent Colors
 # =============================================================================
 
-MSU_GREY: str = "#97A2A2"
+MSU_GREY: str = "#C3C4C6"
 """MSU Grey"""
 
-MSU_GRAY: str = "#97A2A2"
+MSU_GRAY: str = "#C3C4C6"
 """MSU Gray (alias)"""
 
-MSU_ORANGE: str = "#F08521"
+MSU_ORANGE: str = "#FF6F00"
 """MSU Orange"""
 
 MSU_TEAL: str = "#008183"
 """MSU Teal"""
+
+MSU_PURPLE: str = "#5B3256"
+"""MSU Purple"""
 
 MSU_BLUE: str = "#909AB7"
 """MSU Blue (Blue-Grey)"""
@@ -89,11 +92,8 @@ MSU_BURNT_ORANGE: str = "#C89A58"
 MSU_SPLIT_PEA: str = "#94AE4A"
 """MSU Split Pea"""
 
-MSU_PURPLE: str = "#6E005F"
-"""MSU Purple (Eggplant)"""
-
 MSU_EGGPLANT: str = "#6E005F"
-"""MSU Eggplant (alias)"""
+"""MSU Eggplant"""
 
 MSU_RED: str = "#CB5A28"
 """MSU Red (Sienna)"""
@@ -105,6 +105,15 @@ MSU_SIENNA: str = "#CB5A28"
 # =============================================================================
 # Additional MSU Green Variants
 # =============================================================================
+
+MSU_GREEN_LIGHT: str = "#9BB9A8"
+"""MSU Light Green"""
+
+MSU_GREEN_DARK: str = "#0F2922"
+"""MSU Dark Green"""
+
+MSU_GREEN_BRIGHT: str = "#3FA060"
+"""MSU Bright Green"""
 
 MSU_KELLY_GREEN: str = "#008208"
 """MSU Kelly Green"""
@@ -124,23 +133,22 @@ MSU_REFRESH_GREEN: str = "#008934"
 # =============================================================================
 
 BIGTEN_COLORS_PRIMARY: Dict[str, str] = {
+    "Illinois": "#FF552E",
     "Indiana": "#990000",
+    "Iowa": "#FFCD00",
     "MSU": "#18453B",
+    "Maryland": "#F0163A",
+    "Michigan": "#00274C",
+    "Minnesota": "#FFCC33",
+    "Nebraska": "#D00000",
     "Northwestern": "#4E2A84",
     "Ohio State": "#BB0000",
+    "Oregon": "#007030",
     "Penn State": "#001E44",
     "Purdue": "#CFB991",
     "Rutgers": "#CC0033",
     "UCLA": "#2774AE",
-    "Illinois": "#FF552E",
-    "Iowa": "#FFCD00",
-    "Maryland": "#F0163A",
-    "Michigan": "#FFCB05",
-    "Minnesota": "#FFCC33",
-    "Nebraska": "#D00000",
-    "Oregon": "#007030",
-    "USC": "#990000",
-    "USoCal": "#990000",  # Alias for USC
+    "USoCal": "#990000",
     "Washington": "#4B2E83",
     "Wisconsin": "#DA004C",
 }
@@ -152,23 +160,22 @@ BIGTEN_COLORS_PRIMARY: Dict[str, str] = {
 # =============================================================================
 
 BIGTEN_COLORS_SECONDARY: Dict[str, str] = {
+    "Illinois": "#13294B",
     "Indiana": "#EDEBEB",
+    "Iowa": "#000000",
     "MSU": "#FFFFFF",
+    "Maryland": "#FFD90F",
+    "Michigan": "#FFCB05",
+    "Minnesota": "#7A0019",
+    "Nebraska": "#F5F1E7",
     "Northwestern": "#E4E0EE",
     "Ohio State": "#666666",
+    "Oregon": "#FEE11A",
     "Penn State": "#FFFFFF",
     "Purdue": "#000000",
     "Rutgers": "#525C5C",
     "UCLA": "#FFD100",
-    "Illinois": "#13294B",
-    "Iowa": "#000000",
-    "Maryland": "#FFD90F",
-    "Michigan": "#00274C",
-    "Minnesota": "#7A0019",
-    "Nebraska": "#F5F1E7",
-    "Oregon": "#FEE11A",
-    "USC": "#FFCC00",
-    "USoCal": "#FFCC00",  # Alias for USC
+    "USoCal": "#FFCC00",
     "Washington": "#E8E3D3",
     "Wisconsin": "#FFFFFF",
 }
@@ -190,6 +197,7 @@ __all__ = [
     "MSU_GRAY",
     "MSU_ORANGE",
     "MSU_TEAL",
+    "MSU_PURPLE",
     "MSU_BLUE",
     "MSU_BLUE_GREY",
     "MSU_BLUE_GRAY",
@@ -202,11 +210,13 @@ __all__ = [
     "MSU_PEACH",
     "MSU_BURNT_ORANGE",
     "MSU_SPLIT_PEA",
-    "MSU_PURPLE",
     "MSU_EGGPLANT",
     "MSU_RED",
     "MSU_SIENNA",
     # Additional MSU Greens
+    "MSU_GREEN_LIGHT",
+    "MSU_GREEN_DARK",
+    "MSU_GREEN_BRIGHT",
     "MSU_KELLY_GREEN",
     "MSU_LIME_GREEN",
     "MSU_EXCELLENCE_GREEN",

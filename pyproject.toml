@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "msuthemes"
-version = "0.1.0"
+version = "0.2.0"
 description = "MSU and Big Ten color palettes and themes for Python data visualization"
 authors = [
     {name = "Emilio Xavier Esposito", email = "emilio.esposito@gmail.com"}

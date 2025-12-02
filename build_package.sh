@@ -1,10 +1,10 @@
 #!/bin/bash
-# Script to build MSUthemes package for PyPI distribution
+# Script to build msuthemes package for PyPI distribution
 
 set -e
 
 echo "=================================="
-echo "MSUthemes Package Builder"
+echo "msuthemes-py Package Builder"
 echo "=================================="
 echo ""
 
@@ -25,15 +25,15 @@ echo ""
 
 # Step 2: Check required tools
 echo -e "${YELLOW}Step 2: Checking required tools...${NC}"
-if ! command -v python &> /dev/null; then
+if ! command -v python3 &> /dev/null; then
     echo -e "${RED}✗ Python not found${NC}"
     exit 1
 fi
-echo -e "${GREEN}✓ Python found: $(python --version)${NC}"
+echo -e "${GREEN}✓ Python found: $(python3 --version)${NC}"
 
-if ! python -c "import build" &> /dev/null; then
+if ! python3 -c "import build" &> /dev/null; then
     echo -e "${YELLOW}  Installing build tool...${NC}"
-    pip install build
+    python3 -m pip install build
 fi
 echo -e "${GREEN}✓ Build tool available${NC}"
 echo ""
@@ -41,7 +41,7 @@ echo ""
 # Step 3: Run tests
 echo -e "${YELLOW}Step 3: Running tests...${NC}"
 if [ "$1" != "--skip-tests" ]; then
-    pytest tests/ -v --tb=short || {
+    python3 -m pytest tests/ -v --tb=short || {
         echo -e "${RED}✗ Tests failed. Fix errors before building.${NC}"
         exit 1
     }
@@ -53,7 +53,7 @@ echo ""
 
 # Step 4: Build source and wheel distributions
 echo -e "${YELLOW}Step 4: Building distributions...${NC}"
-python -m build
+python3 -m build
 echo -e "${GREEN}✓ Build complete${NC}"
 echo ""
 
@@ -82,7 +82,7 @@ echo "  - Source distribution (.tar.gz)"
 echo "  - Wheel distribution (.whl)"
 echo ""
 echo "Next steps:"
-echo "  1. Test installation: pip install dist/msuthemes-0.1.0-py3-none-any.whl"
+echo "  1. Test installation: pip install dist/msuthemes-0.2.0-py3-none-any.whl"
 echo "  2. Upload to Test PyPI: twine upload --repository testpypi dist/*"
 echo "  3. Test from Test PyPI: pip install --index-url https://test.pypi.org/simple/ msuthemes"
 echo "  4. Upload to PyPI: twine upload dist/*"

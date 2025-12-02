@@ -141,6 +141,7 @@ def load_bigten_data(
         from msuthemes.bigten import normalize_institution_name
 
         normalized_institutions = []
+        invalid_institutions = []
         for inst in institutions:
             try:
                 normalized = normalize_institution_name(inst)
@@ -149,12 +150,21 @@ def load_bigten_data(
                     normalized = "USoCal"
                 normalized_institutions.append(normalized)
             except ValueError as e:
-                warnings.warn(f"Skipping invalid institution '{inst}': {e}")
+                invalid_institutions.append((inst, str(e)))
 
-        if normalized_institutions:
-            df = df[df['name'].isin(normalized_institutions)]
-        else:
-            raise ValueError("No valid institutions specified")
+        # If no valid institutions, raise error without warning
+        if not normalized_institutions:
+            if len(invalid_institutions) == 1:
+                raise ValueError(invalid_institutions[0][1])
+            else:
+                raise ValueError("No valid institutions specified")
+
+        # If some valid and some invalid, warn about invalid ones
+        if invalid_institutions:
+            for inst, error in invalid_institutions:
+                warnings.warn(f"Skipping invalid institution '{inst}': {error}")
+
+        df = df[df['name'].isin(normalized_institutions)]
 
     # Filter years
     if years is not None:
