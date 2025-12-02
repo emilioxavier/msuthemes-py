@@ -57,6 +57,9 @@ extra_javascript:
   - javascripts/extra.js
 
 extra:
+  analytics:
+    provider: google
+    property: G-NCJSQB23WD
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/emilioxavier/msuthemes-py
