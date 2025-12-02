@@ -96,7 +96,7 @@ html_theme_options = {
 html_context = {
     'display_github': True,
     'github_user': 'emilioxavier',
-    'github_repo': 'MSUpythemes',
+    'github_repo': 'msuthemes-py',
     'github_version': 'main',
     'conf_py_path': '/docs/',
 }

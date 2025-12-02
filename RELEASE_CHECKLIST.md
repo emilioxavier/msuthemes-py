@@ -178,7 +178,7 @@ git push origin v0.1.0
 
 ### Create GitHub Release
 
-1. Go to https://github.com/emilioxavier/MSUpythemes/releases
+1. Go to https://github.com/emilioxavier/msuthemes-py/releases
 2. Click "Create a new release"
 3. Select tag `v0.1.0`
 4. Release title: "MSUthemes v0.1.0 - Initial Release"
@@ -320,7 +320,7 @@ git push origin v0.1.0
 For questions about the release process:
 - **Author**: Emilio Xavier Esposito
 - **Email**: emilio@msu.edu
-- **GitHub**: https://github.com/emilioxavier/MSUpythemes/issues
+- **GitHub**: https://github.com/emilioxavier/msuthemes-py/issues
 
 ---
 

@@ -20,8 +20,8 @@ Getting Started
 
    .. code-block:: bash
 
-      git clone https://github.com/YOUR-USERNAME/MSUpythemes.git
-      cd MSUpythemes
+      git clone https://github.com/YOUR-USERNAME/msuthemes-py.git
+      cd msuthemes-py
 
 3. Install development dependencies:
 

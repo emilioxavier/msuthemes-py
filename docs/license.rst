@@ -40,13 +40,13 @@ When using MSUthemes in your work, please provide attribution:
 In publications:
 
     Esposito, E. X. (2025). MSUthemes: MSU and Big Ten Color Palettes and Themes for Python.
-    https://github.com/emilioxavier/MSUpythemes
+    https://github.com/emilioxavier/msuthemes-py
 
 In code or documentation:
 
 .. code-block:: text
 
-   This visualization uses MSUthemes (https://github.com/emilioxavier/MSUpythemes)
+   This visualization uses MSUthemes (https://github.com/emilioxavier/msuthemes-py)
    Licensed under CC BY-SA 4.0
 
 BibTeX citation:
@@ -57,7 +57,7 @@ BibTeX citation:
      author = {Esposito, Emilio Xavier},
      title = {MSUthemes: MSU and Big Ten Color Palettes and Themes for Python},
      year = {2025},
-     url = {https://github.com/emilioxavier/MSUpythemes},
+     url = {https://github.com/emilioxavier/msuthemes-py},
      license = {CC-BY-SA-4.0}
    }
 
@@ -118,7 +118,7 @@ For licensing questions, contact:
 
 * **Author**: Emilio Xavier Esposito
 * **Email**: emilio@msu.edu
-* **GitHub**: https://github.com/emilioxavier/MSUpythemes
+* **GitHub**: https://github.com/emilioxavier/msuthemes-py
 
 Related Licenses
 ----------------

@@ -45,8 +45,8 @@ pip install msuthemes[all]
 For development:
 
 ```bash
-git clone https://github.com/emilioxavier/MSUpythemes.git
-cd MSUpythemes
+git clone https://github.com/emilioxavier/msuthemes-py.git
+cd msuthemes-py
 pip install -e .[dev]
 ```
 
@@ -216,7 +216,7 @@ The package includes colors for all 18 Big Ten institutions:
 
 ## Documentation
 
-Full documentation is available at: [https://emilioxavier.github.io/MSUpythemes/](https://emilioxavier.github.io/MSUpythemes/)
+Full documentation is available at: [https://emilioxavier.github.io/msuthemes-py/](https://emilioxavier.github.io/msuthemes-py/)
 
 ## Examples
 
@@ -267,7 +267,7 @@ If you use MSUthemes in your research or publications, please cite:
   author = {Esposito, Emilio Xavier},
   title = {MSUthemes: MSU and Big Ten Color Palettes and Themes for Python},
   year = {2025},
-  url = {https://github.com/emilioxavier/MSUpythemes}
+  url = {https://github.com/emilioxavier/msuthemes-py}
 }
 ```
 
@@ -275,8 +275,8 @@ If you use MSUthemes in your research or publications, please cite:
 
 - **Author**: Emilio Xavier Esposito
 - **Email**: emilio@msu.edu
-- **GitHub**: [https://github.com/emilioxavier/MSUpythemes](https://github.com/emilioxavier/MSUpythemes)
-- **Issues**: [https://github.com/emilioxavier/MSUpythemes/issues](https://github.com/emilioxavier/MSUpythemes/issues)
+- **GitHub**: [https://github.com/emilioxavier/msuthemes-py](https://github.com/emilioxavier/msuthemes-py)
+- **Issues**: [https://github.com/emilioxavier/msuthemes-py/issues](https://github.com/emilioxavier/msuthemes-py/issues)
 
 ## Acknowledgments
 

@@ -47,8 +47,8 @@ To install the latest development version from GitHub:
 
 .. code-block:: bash
 
-   git clone https://github.com/emilioxavier/MSUpythemes.git
-   cd MSUpythemes
+   git clone https://github.com/emilioxavier/msuthemes-py.git
+   cd msuthemes-py
    pip install -e .
 
 For development with all dev dependencies:
@@ -217,7 +217,7 @@ Getting Help
 
 If you encounter issues not covered here:
 
-1. Check the `GitHub Issues <https://github.com/emilioxavier/MSUpythemes/issues>`_
+1. Check the `GitHub Issues <https://github.com/emilioxavier/msuthemes-py/issues>`_
 2. Search for similar problems in closed issues
 3. Open a new issue with:
    * Your Python version (``python --version``)

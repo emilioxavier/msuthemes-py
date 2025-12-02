@@ -436,8 +436,8 @@ Feel free to use them in your own work with attribution.
 
 ## Getting Help
 
-- **Documentation:** https://emilioxavier.github.io/MSUpythemes/
-- **Issues:** https://github.com/emilioxavier/MSUpythemes/issues
+- **Documentation:** https://emilioxavier.github.io/msuthemes-py/
+- **Issues:** https://github.com/emilioxavier/msuthemes-py/issues
 - **Questions:** Open a discussion on GitHub
 
 ---

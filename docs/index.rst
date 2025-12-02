@@ -53,8 +53,8 @@ Or install from source:
 
 .. code-block:: bash
 
-   git clone https://github.com/emilioxavier/MSUpythemes.git
-   cd MSUpythemes
+   git clone https://github.com/emilioxavier/msuthemes-py.git
+   cd msuthemes-py
    pip install -e .
 
 Quick Example
@@ -146,5 +146,5 @@ Contact
 
 * **Author**: Emilio Xavier Esposito
 * **Email**: emilio@msu.edu
-* **GitHub**: https://github.com/emilioxavier/MSUpythemes
-* **Issues**: https://github.com/emilioxavier/MSUpythemes/issues
+* **GitHub**: https://github.com/emilioxavier/msuthemes-py
+* **Issues**: https://github.com/emilioxavier/msuthemes-py/issues

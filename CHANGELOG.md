@@ -66,10 +66,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Source: U.S. Department of Education College Scorecard
 
 ### Documentation URLs
-- Homepage: https://github.com/emilioxavier/MSUpythemes
-- Documentation: https://emilioxavier.github.io/MSUpythemes/
-- Repository: https://github.com/emilioxavier/MSUpythemes
-- Bug Tracker: https://github.com/emilioxavier/MSUpythemes/issues
+- Homepage: https://github.com/emilioxavier/msuthemes-py
+- Documentation: https://emilioxavier.github.io/msuthemes-py/
+- Repository: https://github.com/emilioxavier/msuthemes-py
+- Bug Tracker: https://github.com/emilioxavier/msuthemes-py/issues
 - Original R Package: https://cran.r-project.org/package=MSUthemes
 
 ### Dependencies
@@ -100,4 +100,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 **Note**: This is an alpha release (0.1.0). The API may change in future versions.
-For the most up-to-date information, visit the [documentation](https://emilioxavier.github.io/MSUpythemes/).
+For the most up-to-date information, visit the [documentation](https://emilioxavier.github.io/msuthemes-py/).
