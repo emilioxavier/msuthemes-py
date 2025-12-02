@@ -1,0 +1,169 @@
+site_name: MSUthemes
+site_url: https://emilioxavier.github.io/msuthemes-py/
+site_author: Emilio Xavier Esposito
+site_description: MSU and Big Ten color palettes and themes for Python data visualization
+
+docs_dir: docs_mkdocs
+
+repo_name: emilioxavier/msuthemes-py
+repo_url: https://github.com/emilioxavier/msuthemes-py
+edit_uri: edit/main/docs_mkdocs/
+
+copyright: Copyright &copy; 2024-2025 Emilio Xavier Esposito. Licensed under CC BY-SA 4.0.
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/palette
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/emilioxavier/msuthemes-py
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/msuthemes/
+  version:
+    provider: mike
+
+plugins:
+  - search:
+      lang: en
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            members_order: source
+            group_by_category: true
+            show_category_heading: true
+            show_if_no_docstring: false
+            inherited_members: false
+            filters:
+              - "!^_"
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Migration from R: getting-started/migration.md
+
+  - User Guide:
+    - Colors: guide/colors.md
+    - Palettes: guide/palettes.md
+    - Themes: guide/themes.md
+    - Big Ten: guide/bigten.md
+    - Datasets: guide/datasets.md
+    - Fonts: guide/fonts.md
+
+  - Gallery:
+    - Overview: gallery/index.md
+    - Basic Plots: gallery/basic.md
+    - MSU Themes: gallery/msu.md
+    - Big Ten Comparisons: gallery/bigten.md
+
+  - API Reference:
+    - Overview: api/index.md
+    - colors: api/colors.md
+    - palettes: api/palettes.md
+    - themes: api/themes.md
+    - fonts: api/fonts.md
+    - bigten: api/bigten.md
+    - data: api/data.md
+    - utils: api/utils.md
+
+  - Development:
+    - Contributing: development/contributing.md
+    - Code of Conduct: development/code_of_conduct.md
+    - Changelog: development/changelog.md
+    - License: development/license.md
